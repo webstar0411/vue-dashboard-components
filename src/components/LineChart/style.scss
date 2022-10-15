@@ -1,0 +1,26 @@
+.line-chart-wrapper {
+    display: inline-block;
+    .title {
+        margin: 0;
+    }
+    .line-chart {
+        height: 350px;
+    }
+
+    .line-chart-header {
+        display: flex;
+        position: absolute;
+        top: 30px;
+        width: 100%;
+        z-index: 100;
+        .date-time-picker {
+            margin-left: 60px;
+            margin-right: 15px;
+        }
+        .select {
+            border: 1px solid rgba(0,0,0,.2);
+            border-radius: 5px;
+            padding: 0 15px;
+        }
+    }
+}

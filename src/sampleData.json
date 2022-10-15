@@ -1,0 +1,83 @@
+{
+    "barChartData": [
+        {
+            "type": "Ticket",
+            "amount": 25
+        },
+        {
+            "type": "Invoice",
+            "amount": 19
+        },
+        {
+            "type": "Test1",
+            "amount": 28
+        },
+        {
+            "type": "Test2",
+            "amount": 8
+        }
+    ], 
+    "cardDatas": [
+        {
+            "type": "Ventas",
+            "today": "S / 2,324.00",
+            "yesterday": "S / 12700.00",
+            "progress": 83
+        },
+        {
+            "type": "Compras",
+            "today": "S / 220.00",
+            "yesterday": "S / 12700.00",
+            "progress": 39
+        },
+        {
+            "type": "Inventario",
+            "today": "#125",
+            "yesterday": "#127",
+            "progress": 74
+        },
+        {
+            "type": "Usuarios",
+            "today": "06:12:24",
+            "yesterday": "111,21.52",
+            "progress": 66
+        }
+    ],
+    "lineData": [{
+        "date": "2022-10-01",
+        "purchase": 75,
+        "sale": 80
+    },{
+        "date": "2022-10-02",
+        "purchase": 92,
+        "sale": 54
+    },{
+        "date": "2022-10-03",
+        "purchase": 18,
+        "sale": 65
+    },{
+        "date": "2022-10-04",
+        "purchase": 73,
+        "sale": 14
+    },{
+        "date": "2022-10-05",
+        "purchase": 61,
+        "sale": 73
+    },{
+        "date": "2022-10-06",
+        "purchase": 70,
+        "sale": 25
+    },{
+        "date": "2022-10-07",
+        "purchase": 49,
+        "sale": 19
+    },{
+        "date": "2022-10-08",
+        "purchase": 51,
+        "sale": 76
+    },{
+        "date": "2022-10-09",
+        "purchase": 93,
+        "sale": 28
+    }]
+}
