@@ -16,11 +16,21 @@
       </div>
 
       <div class="text-center mt-3">
-        <BarChart :data="barChartData"></BarChart>
+        <BarChart
+          :data="barChartData"
+          :options="dateTypes"
+          @onChange="handleBarChart"
+        ></BarChart>
       </div>
 
       <div class="text-center mt-3">
-        <LineChart :data="lineData"></LineChart>
+        <LineChart
+          :data="lineData"
+          @onChangeDate="handleDate"
+          @onChangeType="handleLineChartType"
+          :options="businessTypes"
+        >
+        </LineChart>
       </div>
     </main>
   </section>
@@ -37,4 +47,28 @@ import sampleData from "./sampleData.json";
 const barChartData = ref(sampleData.barChartData);
 const cardDatas = ref(sampleData.cardDatas);
 const lineData = ref(sampleData.lineData);
+
+const businessTypes = {
+  all: "All",
+  business1: "BUSINESS 1",
+  business2: "BUSINESS 2",
+};
+
+const dateTypes = {
+  year: "YEAR",
+  month: "MONTH",
+  day: "DAY",
+};
+
+const handleBarChart = (val) => {
+  console.log(val);
+};
+
+const handleDate = (date) => {
+  console.log(date);
+};
+
+const handleLineChartType = (val) => {
+  console.log(val);
+};
 </script>

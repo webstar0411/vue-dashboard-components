@@ -1,17 +1,29 @@
+/**
+ *  CREATED BY webstar0411@gmail.com
+ *  CREATED AT 2022.10.14
+ *  DESCRIPTION: This component is a line chart and a date picker. Please confirm that you have already installed vue-ctk-date-time-picker and vue-chartjs, chart.js
+ *  npm install -S vue-chartjs chart.js vue-ctk-date-time-picker
+ *  PROPS: data, 
+ */
+
 <template>
   <div class="line-chart-wrapper">
     <div class="line-chart-header">
       <DatePicker
         :range="true"
+        :no-button="true"
         v-model="date"
         format="YYYY-MM-DD"
         formatted="YYYY / MM / DD"
         color="purple"
       ></DatePicker>
-      <select class="select">
-        <option>All</option>
-        <option>Business1</option>
-        <option>Business2</option>
+      <select
+        class="select"
+        @change="(e) => $emit('onChangeType', e.target.value)"
+      >
+        <option v-for="(option, name) in options" :value="name" :key="name">
+          {{ option }}
+        </option>
       </select>
     </div>
     <Line
@@ -25,7 +37,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, reactive, watch, defineEmits } from "vue";
 import { Line } from "vue-chartjs";
 import { Chart, registerables } from "chart.js";
 import DatePicker from "vue-ctk-date-time-picker";
@@ -34,9 +46,16 @@ import "./style.scss";
 
 Chart.register(...registerables);
 
-const { data } = defineProps(["data"]);
-const date = ref(null);
+const { data, options } = defineProps(["data", "options"]);
+const date = ref({ start: null, end: null });
+const emit = defineEmits(["onChangeDate", "onChangeType"]);
 
+watch(date, (newDate, oldDate) => {
+  if (newDate.start === null || newDate.end === null) return;
+  emit("onChangeDate", newDate);
+});
+
+// chart configs
 const chartData = {
   labels: data.map((item) => item.date),
   datasets: [

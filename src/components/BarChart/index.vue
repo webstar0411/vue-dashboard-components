@@ -7,10 +7,10 @@
       :width="600"
       class="bar-chart"
     />
-    <select class="select">
-      <option>Year</option>
-      <option>Month</option>
-      <option>Day</option>
+    <select class="select" @change="(e) => $emit('onChange', e.target.value)">
+      <option v-for="(option, name) in options" :value="name" :key="name">
+        {{ option }}
+      </option>
     </select>
   </div>
 </template>
@@ -23,7 +23,7 @@ import "./style.scss";
 
 Chart.register(...registerables);
 
-const { data } = defineProps(["data"]);
+const { data, options } = defineProps(["data", "options"]);
 
 const chartData = {
   labels: data.map((item) => item.type),

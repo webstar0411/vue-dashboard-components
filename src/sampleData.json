@@ -43,7 +43,8 @@
             "progress": 66
         }
     ],
-    "lineData": [{
+    "lineData": [
+        {
         "date": "2022-10-01",
         "purchase": 75,
         "sale": 80
