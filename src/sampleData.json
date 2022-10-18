@@ -80,5 +80,77 @@
         "date": "2022-10-09",
         "purchase": 93,
         "sale": 28
+    }],
+    "todoData": [{
+        "date": "22-10-18",
+        "hour": "03:10 a.m.",
+        "company": "Hector",
+        "worker": "S&M DM",
+        "title": "LLega Tarde al Trabajo",
+        "description": "",
+        "type": 0,
+        "url": "/"
+    },
+    {
+        "date": "22-10-18",
+        "hour": "03:10 a.m.",
+        "company": "Hector",
+        "worker": "S&M DM",
+        "title": "LLega Tarde al Trabajo",
+        "description": "",
+        "type": 1,
+        "url": "/"
+    },
+    {
+        "date": "22-10-18",
+        "hour": "03:10 a.m.",
+        "company": "Hector",
+        "worker": "S&M DM",
+        "title": "LLega Tarde al Trabajo",
+        "description": "",
+        "type": 0,
+        "url": "/"
+    },
+    {
+        "date": "22-10-18",
+        "hour": "03:10 a.m.",
+        "company": "Hector",
+        "worker": "S&M DM",
+        "title": "LLega Tarde al Trabajo",
+        "description": "",
+        "type": 0,
+        "url": "/"
+    }],
+    "inventoryData": [{
+        "type": "G-84",
+        "percent": 74,
+        "gls": 2456,
+        "color": "#CF2A27",
+        "light": "#EA9999",
+        "bg": "#F5D1D1"
+    },
+    {
+        "type": "G-90",
+        "percent": 32,
+        "gls": 456,
+        "color": "#009E0F",
+        "light": "#B6D7A8",
+        "bg": "#DEEDD8"
+    },
+    {
+        "type": "G-95",
+        "percent": 80,
+        "gls": 3256,
+        "color": "#085394",
+        "light": "#6FA8DC",
+        "bg": "#BED8EF"
+    },
+    {
+        "type": "DB-5",
+        "percent": 55,
+        "gls": 1456,
+        "color": "#666666",
+        "light": "#999999",
+        "bg": "#D0D0D0"
     }]
 }

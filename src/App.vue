@@ -32,6 +32,22 @@
         >
         </LineChart>
       </div>
+
+      <div class="text-center mt-3">
+        <InventoryProgress
+          @onChange="handleInventory"
+          :data="inventoryData"
+          :company="businessTypes"
+        ></InventoryProgress>
+      </div>
+
+      <div class="text-center mt-3">
+        <TodoList
+          :data="todoData"
+          :company="businessTypes"
+          @onChange="handleTodoList"
+        ></TodoList>
+      </div>
     </main>
   </section>
 </template>
@@ -41,12 +57,16 @@ import { ref } from "vue";
 import SummaryCard from "./components/SummaryCard/index.vue";
 import BarChart from "./components/BarChart/index.vue";
 import LineChart from "./components/LineChart/index.vue";
+import InventoryProgress from "./components/InventoryProgress/index.vue";
+import TodoList from "./components/TodoList/index.vue";
 
 import sampleData from "./sampleData.json";
 
 const barChartData = ref(sampleData.barChartData);
 const cardDatas = ref(sampleData.cardDatas);
 const lineData = ref(sampleData.lineData);
+const todoData = ref(sampleData.todoData);
+const inventoryData = ref(sampleData.inventoryData);
 
 const businessTypes = {
   all: "All",
@@ -70,5 +90,13 @@ const handleDate = (date) => {
 
 const handleLineChartType = (val) => {
   console.log(val);
+};
+
+const handleTodoList = (type, val) => {
+  console.log(type, val);
+};
+
+const handleInventory = (type) => {
+  console.log(type);
 };
 </script>
