@@ -14,37 +14,46 @@
             .todo-tooltip {
                 position: relative;
                 display: inline-block;
+
+                .tooltiptext {
+                    visibility: hidden;
+                    width: 120px;
+                    background-color: black;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 6px;
+                    padding: 5px 0;
+                    position: absolute;
+                    z-index: 1;
+                    top: 150%;
+                    left: 50%;
+                    margin-left: -60px;
+                }
+
+                .tooltiptext::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 100%;
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color:  transparent transparent black transparent;
+                }
+
+                &:hover .tooltiptext {
+                    visibility: visible;
+                }
+
+                .success {
+                    position: absolute;
+                    z-index: 10;
+                    bottom: 0;
+                    width: 10px;
+                    right: 0;
+                }
             }
 
-            .todo-tooltip .tooltiptext {
-                visibility: hidden;
-                width: 120px;
-                background-color: black;
-                color: #fff;
-                text-align: center;
-                border-radius: 6px;
-                padding: 5px 0;
-                position: absolute;
-                z-index: 1;
-                top: 150%;
-                left: 50%;
-                margin-left: -60px;
-            }
-
-            .todo-tooltip .tooltiptext::after {
-                content: "";
-                position: absolute;
-                bottom: 100%;
-                left: 50%;
-                margin-left: -5px;
-                border-width: 5px;
-                border-style: solid;
-                border-color:  transparent transparent black transparent;
-            }
-
-            .todo-tooltip:hover .tooltiptext {
-                visibility: visible;
-            }
             img {
                 width: 23px;
                 margin: 0 .1rem;
